@@ -7,6 +7,12 @@ REST API con Python, Flask y MySQL. Usaremos el protocolo HTTP junto con los mé
 ## Unit Test
 ### Run Tests
 ```bash
+python -m virtualenv env
+```
+```bash
+activate.bat
+```
+```bash
 pip3 install -r requirements.txt
 ```
 ```bash
