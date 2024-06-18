@@ -1,0 +1,24 @@
+
+services:
+  flask:
+    container_name: 3b-api
+    build: .
+    ports:
+      - "5001:5000"
+    volumes:
+      - .:/src
+    depends_on:
+      - mysql
+    links:
+      - mysql
+  mysql:
+    image: mysql:latest
+    restart: always
+    container_name: 3b-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456789
+      MYSQL_DATABASE: store
+    ports:
+      - "32000:3306"
+    volumes:
+      - ./src/database:/docker-entrypoint-initdb.d
