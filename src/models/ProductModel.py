@@ -57,8 +57,12 @@ class ProductModel():
     @classmethod
     def get_stock(self, min_stock):
         try:
-            connection = get_connection()
             products = []
+
+            try:
+                connection = get_connection()
+            except Exception as ex:
+                return products
 
             with connection.cursor() as cursor:
                 cursor.execute("""SELECT a.id, a.name, a.sku, b.price, b.stock FROM store.products a 
