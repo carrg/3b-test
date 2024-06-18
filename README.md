@@ -4,22 +4,27 @@ REST API con Python, Flask y MySQL. Usaremos el protocolo HTTP junto con los mé
 
 <hr/>
 
-Primero, crear un entorno virtual:
-### `python -m virtualenv env`
+## Unit Test
+### Run Tests
+```bash
+python -m virtualenv env
+```
+```bash
+activate.bat
+```
+```bash
+pip3 install -r requirements.txt
+```
+```bash
+python -m pytest -s
+```
 
-Activar entorno virtual:
-### `activate.bat`
+## Docker
+### Run container
+```bash
+docker-compose up --build
+```
 
-Para instalar los paquetes necesarios:
-### `pip install -r requirements.txt`
-
-Crear un archivo .env (en la raíz del proyecto) para las variables de entorno:
-
-### `SECRET_KEY=SECRET_KEY`
-### `MYSQL_HOST=host`
-### `MYSQL_USER=user`
-### `MYSQL_PASSWORD=password`
-### `MYSQL_DB=database`
-### `MYSQL_PORT=port`
-### `STOCK_DEFAULT=stock-default`
-### `STOCK_MIN=stock-min`
+## Database
+### Diagram
+[https://github.com/carrg/3b-test/blob/master/database-diagram.png](https://github.com/carrg/3b-test/blob/master/database-diagram.png)
