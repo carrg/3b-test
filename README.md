@@ -24,3 +24,7 @@ python -m pytest -s
 ```bash
 docker-compose up --build
 ```
+
+## Database
+### Diagram
+[https://github.com/carrg/3b-test/blob/master/database-diagram.png](https://github.com/carrg/3b-test/blob/master/database-diagram.png)
